@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+/**
+ * local registry server
+ */
+
+var argv = process.argv.slice(2)
+var dir = argv[0] || process.cwd()
+
+var express = require('express')
+var app = express()
+
+app.enable('strict routing')
+app.use(function (req, res, next) {
+  var parts = req.originalUrl.split('/')
+  var tag = parts.splice(3,1)
+  req.url = req.originalUrl = parts.join('/')
+  next()
+})
+app.use(express.logger('dev'))
+app.use(express.static(dir))
+
+var port = argv[1] || 8080
+var host = argv[2] || 'localhost'
+app.listen(port, host, function () {
+  console.log('listening registry server')
+  console.log('dir: %s', dir)
+  console.log('url: http://%s:%s', host, port)
+})

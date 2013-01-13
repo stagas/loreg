@@ -1,0 +1,11 @@
+{
+  "name": "loreg",
+  "description": "local github-like server/registry using express",
+  "version": "0.1.0",
+  "author": "stagas",
+  "licence": "MIT",
+  "dependencies": {
+    "express": "~3"
+  },
+  "bin": "bin/loreg"
+}
