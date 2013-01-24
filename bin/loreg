@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 app.use(express.logger('dev'))
 app.use(express.static(dir))
 
-var port = argv[1] || 8080
+var port = argv[1] || 6060
 var host = argv[2] || 'localhost'
 app.listen(port, host, function () {
   console.log('listening registry server')
