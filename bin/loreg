@@ -8,6 +8,8 @@ var argv = process.argv.slice(2)
 var resolve = require('path').resolve
 var dir = resolve(argv[0] || process.cwd())
 
+process.title = 'loreg'
+
 var express = require('express')
 var app = express()
 
