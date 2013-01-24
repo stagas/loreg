@@ -1,7 +1,7 @@
 {
   "name": "loreg",
   "description": "local github-like server/registry using express",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "stagas",
   "license": "MIT",
   "dependencies": {
