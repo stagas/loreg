@@ -3,7 +3,7 @@
   "description": "local github-like server/registry using express",
   "version": "0.1.0",
   "author": "stagas",
-  "licence": "MIT",
+  "license": "MIT",
   "dependencies": {
     "express": "~3"
   },
