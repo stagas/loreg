@@ -17,7 +17,7 @@ app.enable('strict routing')
 app.use(function (req, res, next) {
   var parts = req.originalUrl.split('/')
   var tag = parts.splice(3,1)
-  req.url = req.originalUrl = parts.join('/')
+  req.url = parts.join('/')
   next()
 })
 app.use(express.logger('dev'))
