@@ -5,7 +5,8 @@
  */
 
 var argv = process.argv.slice(2)
-var dir = argv[0] || process.cwd()
+var resolve = require('path').resolve
+var dir = resolve(argv[0] || process.cwd())
 
 var express = require('express')
 var app = express()
